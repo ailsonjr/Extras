@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adding Numbers</title>
+  <style>
+    body {
+      font: normal 15pt Arial;
+    }
+    input {
+      font: normal 15pt Arial;
+      width: 100px;
+    }
+    #result {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Adding Values</h1>
+  <input type="number" name="box1" id="num1"> + 
+  <input type="number" name="box2" id="num2">
+  <input type="button" value="Add" onclick="add()">
+  <div id="result">Result</div>
+</body>
+<script>
+  function add() {
+    let input1 = document.getElementById('num1');
+    let input2 = document.getElementsByName('box2')[0];
+    let result = document.querySelector('#result')
+    let number1 = Number(input1.value);
+    let number2 = Number(input2.value);
+    let sum = number1 + number2;
+    result.innerHTML = `The sum between ${number1} and ${number2} is equal to <strong>${sum}</strong>`
+  }
+</script>
+</html>
