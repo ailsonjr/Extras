@@ -1,8 +1,8 @@
 const fruta = document.querySelectorAll('.fruta');
-const btn = document.querySelector('#button');
+const btn = document.querySelector('button');
 
-const arrayFruits = Array.prototype.slice.call(fruta);
-const fruitNames = arrayFruits
+// const arrayFruits = Array.prototype.slice.call(fruta);
+const fruitNames = [...fruta]
   .map((fruit) => fruit.innerHTML)
   .sort()
   .reverse();
